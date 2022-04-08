@@ -2,8 +2,10 @@ from fastapi import FastAPI
 from transformers import pipeline
 from pydantic import BaseModel
 
+
 class Item(BaseModel):
     text: str
+
 
 app = FastAPI()
 classifier = pipeline("sentiment-analysis")
